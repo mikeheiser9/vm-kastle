@@ -1,0 +1,18 @@
+.footer {
+    max-height: 80px;
+    height: 80px;
+    background-color: #AB2328;
+    color: white;
+    bottom: 0;
+    min-width: 100%;
+    width: 100%;
+    z-index: 2;
+    display: -webkit-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright-footer {
+    font-size: 20px;
+}

@@ -1,0 +1,174 @@
+.form-cont {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #d9d9d9;
+}
+
+.form-inner {
+    width: 65%;
+    display: -webkit-box;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.form-inner form {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-inner input[type="text"] {
+    width: 95%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #FFF;
+    border: 2px solid #AB2328;
+    margin-bottom: 15px;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size: 1.5em;
+    box-shadow: 0.75rem 0.85rem 1.75rem 0 rgba(0,0,0,.32);
+}
+
+.text-input-label {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-inner button {
+    width: 60%;
+    background-color: #AB2328;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 50px;
+    font-size: 1.3em;
+    font-weight: 800;
+    box-shadow: 0.75rem 0.85rem 1.75rem 0 rgba(0,0,0,.32);
+    color: #fff;
+    border: none;
+}
+
+.form-inner button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.essential-msg {
+    position: relative;
+}
+
+.essential-msg h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin: 0;
+}
+
+.cat-check-parent {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 20px 0px;
+}
+
+.select-cat {
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-check-input {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: #AB2328;
+    border-radius: 30px;
+    padding: 0px 15px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.cat-check-input input[type="checkbox"], .virt-opp-cont input[type="checkbox"] {
+    min-width: 20px;
+    min-height: 20px;
+    background-color: #AB2328;
+    border: 1px solid #000;
+    color: #fff;
+    font-weight: 800;
+}
+
+.cat-check-input label, .virt-opp-cont label {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.virt-opp-cont {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0px 15px;
+    margin-bottom: 20px; 
+}
+
+.top-input-cont {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+    .cat-check-input input[type="checkbox"], .virt-opp-cont input[type="checkbox"] {
+        min-width: 0px;
+        min-height: 0px;
+        max-width: 80px;
+        max-height: 80px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .form-inner button {
+        width: 80%;
+    }
+} 
+
+@media only screen and (max-width: 767px) {
+    .form-inner {
+        width: 90%;
+        padding: 20px 0;
+    }
+
+    .form-inner button {
+        width: 80%;
+    }
+}

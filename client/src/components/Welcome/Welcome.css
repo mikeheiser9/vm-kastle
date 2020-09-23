@@ -1,0 +1,76 @@
+.welcome-container {
+    position: relative;
+    padding: 0;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+}
+
+.welcome-inner {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    height: auto;
+}
+
+.wel-left {
+    position: relative;
+    width: 50%;
+    min-height: 100%;
+    height: auto;
+    padding: 20px;
+    text-align: left;
+    padding-bottom: 50px;
+}
+
+.wel-left h2 {
+    color: #AB2328;
+}
+
+.wel-left p {
+    font-size: 1.1em;
+}
+
+.wel-right {
+    position: relative;
+    width: 50%;
+    background-image: url("../../images/als-team.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.get-started-btn {
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.get-started-btn span {
+    position: relative;
+    padding: 15px;
+    background-color: #AB2328;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: 600;
+}
+
+.get-started-btn a {
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 767px) {
+    .welcome-inner {
+        flex-flow: column;
+    }
+
+    .wel-left {
+        width: 92%;
+        flex: 1 1 auto;
+    }
+
+    .wel-right {
+        display: none;
+    }
+}

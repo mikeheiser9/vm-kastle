@@ -89,6 +89,7 @@
 
 .select-cat {
     position: relative;
+    flex: 1;
     width: 100%;
     display: -webkit-box;
     display: flex;

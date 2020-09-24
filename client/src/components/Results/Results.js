@@ -28,68 +28,72 @@ class Results extends React.Component {
       <>
         <div className={"results-container"}>
              <div className={"city-header"}>
-              {/* <h2>Opportunities Near {startCase(this.props.form.location) 
-              || ('Sacramento')}</h2> */}
-              <h2>Choose a Virtual Opportunity and Make an Impact!</h2>
+              {
+                this.props.form?.virtual || !this.props.form
+                ? <h2>Choose a Virtual Opportunity and Make an Impact!</h2>
+                : <h2>Opportunities Near {startCase(this.props.form?.location)} </h2>
+              }
             </div>
             <div className={"results-inner"}>
              {
-              this.props.vmData ? 
-              this.props.vmData.opportunities.map((opportunities, index) => (
-              <div className={"cards"} key={index} >
-               {/* { console.log("opportunities ", opportunities) } */}
-                <div className={"top-card"}>
-                 <div className={"opp-img"}>
-                  <div className={"img-inner"}>
-                   <img src={opportunities.imageUrl === null ? "https://bespokedemo.com/wp-content/uploads/2020/01/VolunteerMatch-Logo.png": opportunities.imageUrl} className="card-img-top" alt="oppotunity-img" />
-                  </div>                
-                 </div>
-                <div className={"org-date-cont"}>
-                 <h3>{opportunities.parentOrg.name}</h3>
-                  <span>Date: {opportunities.dateRange.startDate === null ? "Open Ended" : opportunities.dateRange.startDate}</span>
-               </div> 
-              </div>
-             <div className={"card-body"}>
-              <div className={"category-cont"}>
-                { opportunities.categories.length === 3 ? 
-                 <div className={"category-cont-inner"}>
-                  {/* <span>{opportunities.location.virtual === true ? ('Virtual') : ('not virtual')}</span> */}
-                  <span>{startCase(camelCase(opportunities.categories[0]))}</span>
-                  <span>{startCase(camelCase(opportunities.categories[1]))}</span>
-                  <span>{startCase(camelCase(opportunities.categories[2]))}</span> 
-                 </div>
-                : null
-                }
-                { opportunities.categories.length === 2 ? 
-                 <div className={"category-cont-inner"}>
-                  <span>{startCase(camelCase(opportunities.categories[0]))}</span>
-                  <span>{startCase(camelCase(opportunities.categories[1]))}</span>
-                 </div>
-                  : null
-                }
-                { opportunities.categories.length === 1 ? 
-                 <div className={"category-cont-inner"}>
-                  <span>{startCase(camelCase(opportunities.categories[0]))}</span>
-                 </div>
-                  : null
-                }
+              this.props.vmData === ""
+                ? <div>Retrieving results...</div>
+                : this.props.vmData.opportunities.length > 0
+                  ? this.props.vmData.opportunities.map((opportunities, index) => (
+                  <div className={"cards"} key={index} >
+                  {/* { console.log("opportunities ", opportunities) } */}
+                    <div className={"top-card"}>
+                    <div className={"opp-img"}>
+                      <div className={"img-inner"}>
+                      <img src={opportunities.imageUrl === null ? "https://bespokedemo.com/wp-content/uploads/2020/01/VolunteerMatch-Logo.png": opportunities.imageUrl} className="card-img-top" alt="oppotunity-img" />
+                      </div>                
+                    </div>
+                    <div className={"org-date-cont"}>
+                    <h3>{opportunities.parentOrg.name}</h3>
+                      <span>Date: {opportunities.dateRange.startDate === null ? "Open Ended" : opportunities.dateRange.startDate}</span>
+                  </div> 
+                  </div>
+                <div className={"card-body"}>
+                  <div className={"category-cont"}>
+                    { opportunities.categories.length === 3 ? 
+                    <div className={"category-cont-inner"}>
+                      {/* <span>{opportunities.location.virtual === true ? ('Virtual') : ('not virtual')}</span> */}
+                      <span>{startCase(camelCase(opportunities.categories[0]))}</span>
+                      <span>{startCase(camelCase(opportunities.categories[1]))}</span>
+                      <span>{startCase(camelCase(opportunities.categories[2]))}</span> 
+                    </div>
+                    : null
+                    }
+                    { opportunities.categories.length === 2 ? 
+                    <div className={"category-cont-inner"}>
+                      <span>{startCase(camelCase(opportunities.categories[0]))}</span>
+                      <span>{startCase(camelCase(opportunities.categories[1]))}</span>
+                    </div>
+                      : null
+                    }
+                    { opportunities.categories.length === 1 ? 
+                    <div className={"category-cont-inner"}>
+                      <span>{startCase(camelCase(opportunities.categories[0]))}</span>
+                    </div>
+                      : null
+                    }
+                    </div>
+                  <div className={"opp-title-cont"}>
+                    <div className={"opp-title"}>
+                      <h3>{opportunities.title}</h3>
+                    </div>
+                    <div className={"opp-desc"}>
+                      {/* {console.log("desc " + opportunities.description)} */}
+                    <p>{opportunities.description.replace(regex,'')}</p>
+                    </div>
+                  </div>
+                  <div className={"learn-more"} onClick={()=> this.handleClick(opportunities)}>
+                    <span>Learn More</span>
+                  </div>
                 </div>
-              <div className={"opp-title-cont"}>
-                <div className={"opp-title"}>
-                   <h3>{opportunities.title}</h3>
-                </div>
-                <div className={"opp-desc"}>
-                  {/* {console.log("desc " + opportunities.description)} */}
-                 <p>{opportunities.description.replace(regex,'')}</p>
-                </div>
-               </div>
-              <div className={"learn-more"} onClick={()=> this.handleClick(opportunities)}>
-                <span>Learn More</span>
-              </div>
             </div>
-        </div>
-         )
-        ): <div>No results found.</div>}
+            )
+            ): <div>No results found.</div>}
         </div>
       </div>
       <div className = {this.state.showModal ? 'showModal' : 'hideModal'}>

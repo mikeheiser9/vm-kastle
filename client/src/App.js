@@ -14,31 +14,54 @@ import axios from "axios"
 
 class App extends Component {
   state = {
-    data: null,
     form: "",
     vmData: ""
   };
 
   handleFormSubmit = (event, form) => {
     event.preventDefault()
+    console.log("22", form)
     this.setState({
       form: form
     })
   }
 
   componentDidMount(){
-    axios.post('https://bespokedigitallabs.com/getVmData', {form: this.state.form}).then(response => {
+    axios.post('https://bespokedigitallabs.com/getVmDataKastle', {
+      form: {
+        virtual: true,
+        location: "",
+        value: [],
+        greatFor:  [],
+        keywordsArr: '[""]'
+      }
+    }).then(response => {
       this.setState({
-        vmData: response.data
+        vmData: response.data,
+        form: ""
       })
     })
   }
 
   componentDidUpdate(prevProps, prevState){
-    if(prevState.form !== this.state.form){
-      axios.post('https://bespokedigitallabs.com/getVmData', {form: this.state.form}).then(response => {
+    if(prevState.form !== this.state.form && this.state.form){
+      this.setState({
+        vmData: ""
+      })
+      let object = this.state.form
+      let greatFor = []
+      let keywordsArr = JSON.stringify(object.keywords.replace(/[^a-zA-Z0-9 ]/g, "").split(" "))
+      if(object["goodFor"]){
+        greatFor.push(object["goodFor"])
+      }
+      object.greatFor = greatFor
+      object.keywordsArr = keywordsArr
+
+      axios.post("https://bespokedigitallabs.com/getVmDataKastle", {
+        form: object
+      }).then(data=>{
         this.setState({
-          vmData: response.data
+          vmData: data.data
         })
       })
     }

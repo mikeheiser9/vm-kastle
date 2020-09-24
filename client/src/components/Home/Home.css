@@ -68,6 +68,10 @@
     line-height: 1em;
 }
 
+.corp-cont img {
+    max-width: 100%;
+}
+
 .sub-header h3 {
     max-width: 100%;
     color:#fff;
@@ -141,7 +145,7 @@
 
 @media only screen and (max-width: 500px) {
     .data-container {
-        height: 500px;
+        height: 250px;
     }
     
     .corp-cont h1 {
@@ -199,6 +203,12 @@
     .corp-cont h1 {
         font-size: 3em;
     }
+}
+
+@media only screen and (max-width: 767px) {
+.data-container {
+    justify-content: flex-end;
+}
 }
 
 @media only screen and (max-width: 375px) {

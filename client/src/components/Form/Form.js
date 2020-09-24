@@ -115,28 +115,6 @@ class Form extends React.Component {
                   />
                 <label>View ONLY virtual opportunites?</label>
               </div>
-              <div className={window.location.pathname=== "/" ? 'cat-check-parent-results' : "cat-check-parent"}>
-              {/* <label>Great For</label> */}
-                <select value={this.state.goodFor} onChange={this.handleGfChange}>
-                  {/* {console.log('goodFor ', this.state.goodFor)} */}
-                  <option value={""} id={"cation-input"}>-- Great For --</option>
-                  <option value={"groups"} id={"cation-input"}>Groups</option>
-                  <option value={"seniors"} id={"cation-input"}>Seniors</option>
-                  <option value={"teens"} id={"cation-input"}>Teens</option>
-                  <option value={"kids"} id={"cation-input"}>Kids</option>
-                </select>
-              </div>
-              <div className={window.location.pathname=== "/" ? 'keyword-cont-results' : "keyword-cont"}>
-                <input
-                  onChange={this.handleKeywordsInputChange}
-                  value={this.state.keywords}
-                  name={"keywords"}
-                  type={"text"}
-                  placeholder={"Filter by keywords (optional)"}
-                  id={"cation-input"}
-                  className={"keywords-input"}
-                />
-              </div>
             </div>
             <select onChange={this.handleFilter} value={this.state.value} className={"select-cat"}>
               <option
@@ -284,6 +262,31 @@ class Form extends React.Component {
                 id={"cation-input"}>Women
               </option>
             </select>
+            <div className={"filter-cont"}>
+            <div className={window.location.pathname=== "/" ? 'cat-check-parent-results' : "cat-check-parent-gf"}>
+              {/* <label>Great For</label> */}
+                <select value={this.state.goodFor} onChange={this.handleGfChange} className={"select-gf"}>
+                  {/* {console.log('goodFor ', this.state.goodFor)} */}
+                  <option value={""} id={"cation-input"}>-- Great For --</option>
+                  <option value={"groups"} id={"cation-input"}>Groups</option>
+                  <option value={"seniors"} id={"cation-input"}>Seniors</option>
+                  <option value={"teens"} id={"cation-input"}>Teens</option>
+                  <option value={"kids"} id={"cation-input"}>Kids</option>
+                </select>
+              </div>
+              <div className={window.location.pathname=== "/" ? 'keyword-cont-results' : "keyword-cont-kw"}>
+                <input
+                  onChange={this.handleKeywordsInputChange}
+                  value={this.state.keywords}
+                  name={"keywords"}
+                  type={"text"}
+                  placeholder={"Filter by keywords (optional)"}
+                  id={"cation-input"}
+                  className={"keywords-input"}
+                />
+              </div>
+            </div>
+
             <button
                 type="submit"
                 onClick={(event)=>{

@@ -11,7 +11,7 @@ class Welcome extends React.Component {
           <div className={"wel-mid-top"}>
             <div className={"mid-top-dates"}>
              <h3>Kastle Days of Service | October 15 & 16, 2020</h3>
-             <a href={"#"}><span>Download Program</span></a>
+             <a href={"../../../../pdf/kastle-cares-program.pdf"} download><span>Download Program</span></a>
             </div>
             <div className={"mid-top-txt"}>
               <p>We are scheduling two days of volunteer service to improve our local communities. Check out the opportunities that we have identified and see how you can get involved and make a difference! Sign up today!</p>

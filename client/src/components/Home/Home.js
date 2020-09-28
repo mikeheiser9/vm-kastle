@@ -16,24 +16,17 @@ class Home extends React.Component {
   render() {
     return (
     <div className={"home-container"}>
-    <div className={"home-inner"}>
      <div className={"data-container"}>
-    <div className={"intro-cont"}>
-    {/* <div className={"sub-header"}>
-       <h3>Community Engagement</h3>
-      </div> */}
-      <div className={"corp-cont"}>
-      <img src="../../../../img/Kastle-CARES-color-logo-gray-sub-text.png" alt={"kastleCares-logo"}></img>
-
+      <div className={"kares-cont"}>
+       <img src="../../../../img/Kastle-CARES-color-logo-gray-sub-text.png" alt={"kastleCares-logo"}></img>
       </div>
-      </div>
-      <div className={"page-down"}>
-       <div onClick={this.handleScroll}>
-        <img src={"https://bespokedemo.com/wp-content/uploads/2020/02/scroll.png"} alt={"page-dwn"}></img>
-       </div>
+      <div className={"hands-cont"}>
+        <img src="../../../../img/hands-heart.jpg" alt={"hands-img"}></img>
       </div>
      </div>
-     </div>
+     <div className={"home-btm"}>
+          <p>To raise awareness on issues that matter to us, provide insight opportunities for Kastle to give back and create a positive impact in the local communities that we serve. We believe that altogether we can make a difference by contributing to a cause through donation of time and/or money.</p>
+        </div>
     </div>
     );
   }

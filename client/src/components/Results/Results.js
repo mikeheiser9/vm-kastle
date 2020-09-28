@@ -30,7 +30,7 @@ class Results extends React.Component {
              <div className={"city-header"}>
               {
                 this.props.form?.virtual || !this.props.form
-                ? <h2>Choose a Virtual Opportunity and Make an Impact!</h2>
+                ? <h2>Choose an Opportunity and Make an Impact!</h2>
                 : <h2>Opportunities Near {startCase(this.props.form?.location)} </h2>
               }
             </div>

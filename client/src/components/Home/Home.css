@@ -1,60 +1,63 @@
 .home-container {
     height: 100%;
     width: 100%;
-    background: #fafafa;
+    background: #fff;
     display: -webkit-box;
     display: flex;
     display: -webkit-flex;
     flex-flow: column;
     z-index: 1;
     position: relative;
-    background-image: url('../../images/heart-hands.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.home-container:after {
-    content: ' ';
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(10,94,104);
-    background-repeat: no-repeat;
-    opacity: 0.3;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    background-size: contain;
 }
 
 .home-inner {
-    padding: 50px 30px;
+    padding: 0px 30px;
 }
 
 .data-container {
+    position: relative;
     display: -webkit-box;
     display: flex;
     display: -webkit-flex;
-    flex-flow: column;
+    flex-flow: row nowrap;
     justify-content: center;
-    align-items: flex-start;
-    position: relative;
-    height: 400px;
+    align-items: center;
     width: 100%;
+    height: auto;
     z-index: 1;
 }
 
-.intro-cont {
-    display: -webkit-box;
-    display: flex;
-    display: -webkit-flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+.home-btm {
+    background-color: #62B5E5;
+    padding: 5px 5%;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.kares-cont {
     position: relative;
+    width: 70%;
+    max-width: 70%;
+}
+
+.hands-cont {
+    position: relative;
+    width: 30%;
+    max-width: 30%;
+}
+
+.hands-cont img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.kares-cont img {
+    max-width: 100%;
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
 
 .corp-cont h1 {
@@ -66,10 +69,6 @@
     padding: 0;
     margin: 0;
     line-height: 1em;
-}
-
-.corp-cont img {
-    max-width: 100%;
 }
 
 .sub-header h3 {
@@ -144,10 +143,6 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .data-container {
-        height: 250px;
-    }
-    
     .corp-cont h1 {
         font-size: 12.5vw;
     }
@@ -208,7 +203,7 @@
 @media only screen and (max-width: 767px) {
 .data-container {
     justify-content: flex-end;
-}
+ }
 }
 
 @media only screen and (max-width: 375px) {

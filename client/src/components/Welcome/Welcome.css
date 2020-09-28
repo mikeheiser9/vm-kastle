@@ -6,72 +6,205 @@
     height: 100%;
 }
 
-.welcome-inner {
+.wel-mid {
+    position: relative;
+    padding: 80px 5%;
+    background-color: #000;
+    color: #fff;
+}
+
+.wel-mid-top {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+
+.mid-top-dates {
     position: relative;
     display: flex;
     flex-flow: row nowrap;
-    width: 100%;
-    height: auto;
+    justify-content: flex-start;
+    align-items: flex-end;
 }
 
-.wel-left {
+.mid-top-dates h3 {
+    margin: 0;
+    font-size: 26px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+
+.mid-top-dates a {
+    color: #fff
+} 
+
+.mid-top-txt {
     position: relative;
-    width: 50%;
-    min-height: 100%;
-    height: auto;
-    padding: 20px;
     text-align: left;
-    line-height: 1.7em;
-    padding-bottom: 50px;
-}
-
-.wel-left h2 {
-    color: #AB2328;
-}
-
-.wel-left p {
-    font-size: 1.1em;
-}
-
-.wel-right {
-    position: relative;
-    width: 50%;
-    background-image: url("../../images/als-team.jpg");
-    background-size: cover;
-    background-position: center;
-}
-
-.get-started-btn {
-    position: relative;
-    width: 100%;
-    margin-top: 40px;
-}
-
-.get-started-btn span {
-    position: relative;
-    padding: 15px;
-    background-color: #AB2328;
+    font-size: 18px;
     color: #fff;
-    cursor: pointer;
-    border-radius: 30px;
     font-weight: 600;
 }
 
-.get-started-btn a {
+.wel-mid-mid {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.mid-table-cont {
+    position: relative;
+    width: 60%;
+    padding-right: 20px;
+}
+
+.mid-table-cont img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.mid-img {
+    position: relative;
+    width: 40%;
+}
+
+.mid-img img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.wel-mid-btm {
+    position: relative;
+    text-align: left;
+    font-weight: 600;
+}
+
+.wel-mid-btm li {
+    line-height: 2em;
+}
+
+.wel-mid-btm a {
+    background: #62B5E5;
+    padding: 8px;
+    margin-left: 15px;
+    border-radius: 10px;
+    color: #fff;
     text-decoration: none;
 }
 
+.wel-btm {
+    position: relative;
+    display: flex;
+    background-color: #fff;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 5%;
+}
+
+.vm-logo {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.vm-logo img {
+    position: relative;
+    display: block;
+    max-width: 150px;
+    border: 2px solid #62B5E5;
+    padding: 2px;
+    margin-top: -30px;
+    background-color: #fff;
+}
+
+.wel-btm-inner {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+}
+
+.wel-btm-txt {
+    position: relative;
+    width: 65%;
+}
+
+.wel-btm-btn {
+    position: relative;
+    width: 35%;
+}
+
+.wel-btm-txt p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.wel-btm-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wel-btm-btn a {
+    position: relative;
+    background-color: #62B5E5;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
 @media only screen and (max-width: 767px) {
-    .welcome-inner {
+    .mid-top-dates h3 {
+        text-align: left;
+    }
+
+    .wel-mid-mid {
         flex-flow: column;
     }
 
-    .wel-left {
-        width: 92%;
-        flex: 1 1 auto;
+    .mid-table-cont {
+        width: 100%;
+        padding-right: 0;
     }
 
-    .wel-right {
-        display: none;
+    .mid-img {
+        width: 100%;
+        margin-top: 20px;
     }
-}
+
+    .wel-btm-inner {
+        flex-flow: column;
+    }
+
+    .wel-btm-txt p {
+        font-size: 15px;
+    }
+
+    .wel-btm-txt {
+        width: 100%;
+        text-align: center;
+    }
+
+    .wel-btm-btn {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .mid-top-dates {
+        flex-flow: column;
+        align-items: flex-start;
+    }
+} 

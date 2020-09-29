@@ -1,5 +1,6 @@
 import React from "react";
 import "../Home/Home.css";
+import { Link } from "react-router-dom";
 // import API from "../utils/API";
 
 class Home extends React.Component {
@@ -18,10 +19,12 @@ class Home extends React.Component {
     <div className={"home-container"}>
      <div className={"data-container"}>
       <div className={"kares-cont"}>
+      <Link to={"/"}>
        <img src="../../../../img/Kastle-CARES-color-logo-gray-sub-text.png" alt={"kastleCares-logo"}></img>
+       </Link>
       </div>
       <div className={"hands-cont"}>
-        <img src="../../../../img/hands-heart.jpg" alt={"hands-img"}></img>
+          <img src="../../../../img/hands-heart.jpg" alt={"hands-img"}></img>
       </div>
      </div>
      <div className={"home-btm"}>

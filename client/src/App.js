@@ -5,9 +5,8 @@ import Footer from "./components/Footer";
 import Home from "./components/Home";
 import Welcome from "./components/Welcome";
 import Form from "./components/Form";
-import Header from "./components/Header"
+// import Header from "./components/Header"
 import Results from "./components/Results";
-
 import axios from "axios"
 
 // import NoMatch from "./components/NoMatch";
@@ -71,7 +70,7 @@ class App extends Component {
     return (
     <div className="App">
     <Router>
-      <Header />
+      {/* <Header /> */}
       <Route path="/" component={Home} />
       <Route exact path="/" component={Welcome} />
       <Route exact path="/search" render={ ()=> <Form handleFormSubmit={this.handleFormSubmit} />}/>

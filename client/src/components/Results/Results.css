@@ -535,7 +535,7 @@
     padding: 15px;
     border-radius: 30px;
     text-align: center;
-    font-family: 'Montserrat', sans-serif !important;
+    /* font-family: 'Montserrat', sans-serif !important; */
     font-size: 18px;
     font-weight: 600;
     color: #333;

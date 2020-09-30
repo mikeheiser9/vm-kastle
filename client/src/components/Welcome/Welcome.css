@@ -35,7 +35,8 @@
 }
 
 .mid-top-dates a {
-    color: #fff
+    color: #fff;
+    margin-bottom: 5px;
 } 
 
 .mid-top-txt {
@@ -94,6 +95,7 @@
     border-radius: 10px;
     color: #fff;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 .wel-btm {

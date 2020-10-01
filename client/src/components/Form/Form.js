@@ -89,11 +89,9 @@ class Form extends React.Component {
       <div className={'form-cont'} id={"anchor"}>
         <div className={'form-inner'}>
           <form className="search">
-            <div className={"select-cat"}>
               <div className={"essential-msg"}>
                 <h2>Choose an area to make an impact!</h2>
               </div>
-            </div>
             <input
               style={this.state.location === "" ? {opacity: 0.8} : null}
               onChange={this.handleInputChange}
@@ -116,6 +114,8 @@ class Form extends React.Component {
                 <label>View ONLY virtual opportunites?</label>
               </div>
             </div>
+            <div className={"filter-cont"}>
+            <div className={"cat-parent"}>
             <select onChange={this.handleFilter} value={this.state.value} className={"select-cat"}>
               <option
               value={""}
@@ -262,7 +262,7 @@ class Form extends React.Component {
                 id={"cation-input"}>Women
               </option>
             </select>
-            <div className={"filter-cont"}>
+            </div>
             <div className={window.location.pathname=== "/" ? 'cat-check-parent-results' : "cat-check-parent-gf"}>
               {/* <label>Great For</label> */}
                 <select value={this.state.goodFor} onChange={this.handleGfChange} className={"select-gf"}>

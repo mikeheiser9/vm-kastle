@@ -529,18 +529,6 @@
     display: none;
 }
 
-.select-cat {
-    position: relative;
-    margin-bottom: 30px;
-    padding: 15px;
-    border-radius: 30px;
-    text-align: center;
-    /* font-family: 'Montserrat', sans-serif !important; */
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-}
-
 @media only screen and (max-width: 767px) {
     .modal-opp-title {
         position: relative;

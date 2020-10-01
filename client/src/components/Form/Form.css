@@ -68,6 +68,7 @@
 
 .essential-msg {
     position: relative;
+    margin-bottom: 30px;
 }
 
 .essential-msg h2 {
@@ -87,7 +88,7 @@
     margin: 20px 0px;
 }
 
-.select-cat {
+/* .select-cat {
     position: relative;
     flex: 1;
     width: 100%;
@@ -96,6 +97,19 @@
     flex-flow: column;
     justify-content: center;
     align-items: center;
+} */
+
+.select-cat {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    background-color: #FAFAFA;
+    width: 100%;
 }
 
 .cat-check-input {
@@ -184,6 +198,11 @@
     border: 1px solid;
 }
 
+.cat-check-parent-gf select, .keyword-cont-kw select, .cat-parent select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 
 
 @media only screen and (max-width: 1024px) {
@@ -198,6 +217,16 @@
 @media only screen and (max-width: 768px) {
     .form-inner button {
         width: 80%;
+    }
+    .cat-check-parent-gf, .keyword-cont-kw, .cat-parent {
+        width: 100%;
+        border-radius: 30px;
+    }
+    .keyword-cont-kw input[type="text"], .select-gf {
+        width: 100%;
+    }
+    .keywords-input {
+        max-width: 96% !important;
     }
 } 
 
@@ -215,7 +244,9 @@
         width: 80%;
     }
 
-    .keyword-cont-kw input[type="text"], .select-gf {
-        min-width: 100%;
-    }
+     .form-inner input[type="text"] {
+         text-align: center;
+         border-radius: 30px;
+     }
+
 }

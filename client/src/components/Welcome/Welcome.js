@@ -28,7 +28,7 @@ class Welcome extends React.Component {
           <div className={"wel-mid-btm"}>
             <p>To sign up for the days of service:</p>
             <ol>
-              <li>Join the Kastle HR Microsoft Team <a href={"https://teams.microsoft.com/l/team/19%3a37d83de267c846f7a728c724c54e188b%40thread.tacv2/conversations?groupId=8c9686a4-f4a7-43e6-b40a-51f4807211f7&tenantId=7280061d-06ed-4a4e-a2b1-cc9ab5638c09"} target={"_blank"}><span>Join Now</span></a></li>
+              <li>Join the Kastle HR Microsoft Team <a href={"https://teams.microsoft.com/l/team/19%3a37d83de267c846f7a728c724c54e188b%40thread.tacv2/conversations?groupId=8c9686a4-f4a7-43e6-b40a-51f4807211f7&tenantId=7280061d-06ed-4a4e-a2b1-cc9ab5638c09"} target={"_blank"} rel="noopener noreferrer"><span>Join Now</span></a></li>
               <li>Click Tab “Fill | Kastle C.A.R.E.S. Days of Service” in the Kastle C.A.R.E.S. channel</li>
             </ol>
           </div>

@@ -115,7 +115,7 @@ class Results extends React.Component {
               </div>
             </div>
             <div className={"modal-top-right"}>
-              <Link to={{pathname: this.state.opp.url}} target="_blank">
+              <Link to={{pathname: `${this.state.opp.url}?_sid=kastle`}} target="_blank">
                <span>I Want to Help!</span>
               </Link>
             </div>

@@ -37,7 +37,7 @@ class Results extends React.Component {
             <div className={"results-inner"}>
              {
               this.props.vmData === ""
-                ? <div>Retrieving results...</div>
+                ? <div className="retrieving-text">Retrieving results...</div>
                 : this.props.vmData.opportunities.length > 0
                   ? this.props.vmData.opportunities.map((opportunities, index) => (
                   <div className={"cards"} key={index} >

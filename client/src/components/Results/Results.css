@@ -29,7 +29,11 @@
     padding-bottom: 30px;
     margin-top: 20px;
     margin-bottom: 50px;
-}   
+}  
+
+.retrieving-text {
+    color: #fff;
+}
 
 .city-header {
     position: relative;
